@@ -1,4 +1,4 @@
-# vue-demo
+# simple-admin
 
 ## Project setup
 ```
