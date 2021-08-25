@@ -7,7 +7,12 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component: () => import ('@w/comm/login'),
+      component: () => import('@w/comm/login'),
+      hidden: true
+    },
+    {
+      path: '/home',
+      component: () => import('@w/comm/home'),
       hidden: true
     }
   ]
