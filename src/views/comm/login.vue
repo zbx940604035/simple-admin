@@ -22,7 +22,9 @@
             show-password/>
         </el-form-item>
         <el-form-item class="submit-button">
-          <el-button type="primary" @click="login('loginForm')">登录</el-button>
+          <el-button
+            type="primary"
+            @click="loginSumilt('loginForm')">登录</el-button>
         </el-form-item>
       </el-form>
     </div>
@@ -34,15 +36,20 @@ export default {
   data() {
     return {
       loginForm: {
-        userName: '',
-        pass: ''
+        userName: 'admin',
+        pass: '123456'
       },
       rules: {}
     }
   },
-  mthods: {
-    login() {
-
+  methods: {
+    loginSumilt() {
+      this.axios.post('/api/user/login').then(({ data }) => {
+        if (data.code === 200) {
+          sessionStorage.setItem('token', 520)
+          this.$router.push('/')
+        }
+      })
     }
   }
 }

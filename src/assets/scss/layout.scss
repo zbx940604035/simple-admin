@@ -1,0 +1,20 @@
+.loyout{
+    height: 100vh;
+    background-color: #fff;
+    .content {
+        display: flex;
+    }
+}
+.header-top {
+    background-color: rgb(123, 173, 214);
+    height: 100px;
+}
+.nav {
+    width: 220px;
+    background-color: rgb(84, 92, 100);
+    height: calc(100vh - 100px);
+}
+.content-main {
+    flex: 1;
+    background-color: #fff;
+}
